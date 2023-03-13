@@ -1,0 +1,68 @@
+.nav{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color: bisque;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+.productsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px
+}
+
+.product > div{
+    text-align: center;
+}
+
+.image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin: 10px;
+    opacity: 0.9;
+    border: 6px groove lightcoral
+}
+
+.pageController {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding:30px
+}
+
+.leftPointer,
+.rightPointer,
+.pageNumber,
+.pageNumber__active {
+    border: 2px solid rgb(149, 141, 141);
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pageNumber:hover{
+    background-color: bisque;
+}
+
+.pageNumber__active{
+    background-color: rgb(234, 189, 135);
+}
+
+.rightPointer__inactive,
+.leftPointer__inactive {
+    border: 2px solid rgb(149, 141, 141);
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 0.2;
+    cursor: none;
+}
