@@ -11,6 +11,7 @@ const container = document.querySelector(".container");
 
 let query="";
 
+//https://www.youtube.com/watch?v=kSiuXLfF9HM&t=326s
 const debounce = (fn, duration) => {
     let timer = null;
     return function (...args){ 
