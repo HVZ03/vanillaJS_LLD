@@ -2,6 +2,7 @@ let userContainer = document.querySelector(".userContainer");
 let pageNumber=1, pageSize =30;
 let isLoading = false
 
+//https://www.youtube.com/watch?v=n3i4j2b8PIA&list=PLp57ZqpB-mGFicYcEU6A1622-Mwq7u7hx&index=8
 const fetchData = async (pageNumber, pageSize) =>{
     isLoading = true 
     const response = await fetch(`https://randomuser.me/api/?page=${pageNumber}&results=${pageSize}&seed=abc`)
@@ -27,9 +28,9 @@ const loadUser= async (pageNumber,pageSize) => {
         renderUser(user);
       });
 
-      if (isLoading) {
-        observeLastElement();
+      if (isLoading) { //once data is fetched from API set isLoading to false and observe the last element
         isLoading = false;
+        observeLastElement();
       }
 
       resolve("success")
